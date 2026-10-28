@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "als-analyzer"
+version = "0.1.0"
+description = "Read-only analyzer for Ableton Live (.als) sessions."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["defusedxml>=0.7", "rich>=13"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+als-analyzer = "als_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
