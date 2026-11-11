@@ -2,6 +2,8 @@
 
 Read-only analyzer for Ableton Live (`.als`) sessions. **Know what a session needs before you open it.**
 
+![HTML report generated from a synthetic session](docs/report.png)
+
 ## What it is for
 
 Opening a large session just to find out it is missing a plugin or a sample is slow and annoying. `als-analyzer` answers the practical questions up front, without launching Live:
@@ -158,6 +160,10 @@ A `Finding` has a severity (`info` / `warning`), a message, an optional track an
 - Key detection reads names only; it cannot hear the audio. Chord names such as `Am7` are not recognised.
 - Transposition is applied only to warped clips; fine-tune cents are ignored.
 - If the `.als` was copied out of its `... Project` folder, the project folder is inferred from the sample paths.
+
+## License
+
+[MIT](LICENSE)
 
 ## Development
 
